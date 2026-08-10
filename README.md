@@ -1,5 +1,14 @@
 # Machine Learning-Based Mobile Money Fraud Detection
 
+## Contributors
+
+1. ##### Name: BAFFOUR ABRAHAM AWUAH | Index Number: UEB3512623 | GitHub: https://github.com/awuah-baffour
+
+2. ##### Name: ABDUL WAKIL MAGIWABA DI-ELUMA | Index Number: UEB3502723| GitHub: https://github.com/mawdieluma-design
+
+3. ##### Name: SARBAH DANIEL| Index Number: UEB3512723 | GitHub: https://github.com/Sarbah08
+
+
 ## Overview
 
 This project investigates machine-learning approaches for detecting fraudulent mobile-money transactions using a reduced 100,000-record experimental subset of the synthetic PaySim dataset.
@@ -174,11 +183,4 @@ Threshold
 - High performance may partly reflect PaySim-specific simulation patterns.
 - External validation is required before real-world deployment claims.
 
-## Contributors
-
-1. ##### Name: BAFFOUR ABRAHAM AWUAH | Index Number: UEB3512623 | GitHub: https://github.com/awuah-baffour
-
-2. ##### Name: ABDUL WAKIL MAGIWABA DI-ELUMA | Index Number: UEB3502723| GitHub: https://github.com/mawdieluma-design
-
-3. ##### Name: SARBAH DANIEL| Index Number: UEB3512723 | GitHub: https://github.com/Sarbah08
 
