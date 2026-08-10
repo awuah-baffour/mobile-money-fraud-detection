@@ -1,0 +1,147 @@
+{
+  "primary_raw_features_before_encoding": [
+    "step",
+    "amount",
+    "log_amount",
+    "oldbalanceOrg",
+    "oldbalanceDest",
+    "amount_to_origin_balance_ratio",
+    "amount_to_destination_balance_ratio",
+    "origin_balance_zero",
+    "destination_balance_zero",
+    "origin_balance_sufficient",
+    "step_day",
+    "type"
+  ],
+  "primary_numeric_features": [
+    "step",
+    "amount",
+    "log_amount",
+    "oldbalanceOrg",
+    "oldbalanceDest",
+    "amount_to_origin_balance_ratio",
+    "amount_to_destination_balance_ratio",
+    "origin_balance_zero",
+    "destination_balance_zero",
+    "origin_balance_sufficient",
+    "step_day"
+  ],
+  "primary_categorical_features": [
+    "type"
+  ],
+  "post_transaction_comparison_features": [
+    "step",
+    "amount",
+    "log_amount",
+    "oldbalanceOrg",
+    "oldbalanceDest",
+    "amount_to_origin_balance_ratio",
+    "amount_to_destination_balance_ratio",
+    "origin_balance_zero",
+    "destination_balance_zero",
+    "origin_balance_sufficient",
+    "step_day",
+    "newbalanceOrig",
+    "newbalanceDest",
+    "origin_balance_change",
+    "destination_balance_change",
+    "type"
+  ],
+  "encoded_feature_names": [
+    "step",
+    "amount",
+    "log_amount",
+    "oldbalanceOrg",
+    "oldbalanceDest",
+    "amount_to_origin_balance_ratio",
+    "amount_to_destination_balance_ratio",
+    "origin_balance_zero",
+    "destination_balance_zero",
+    "origin_balance_sufficient",
+    "step_day",
+    "type_CASH_IN",
+    "type_CASH_OUT",
+    "type_DEBIT",
+    "type_PAYMENT",
+    "type_TRANSFER"
+  ],
+  "raw_feature_count_before_encoding": 12,
+  "encoded_feature_count_after_preprocessing": 16,
+  "train_shape_before_encoding": [
+    80000,
+    12
+  ],
+  "test_shape_before_encoding": [
+    20000,
+    12
+  ],
+  "train_shape_after_encoding": [
+    80000,
+    16
+  ],
+  "test_shape_after_encoding": [
+    20000,
+    16
+  ],
+  "split_summary": [
+    {
+      "split": "train",
+      "rows": 80000,
+      "legitimate": 76000,
+      "fraudulent": 4000,
+      "fraud_rate_percent": 5.0
+    },
+    {
+      "split": "test",
+      "rows": 20000,
+      "legitimate": 19000,
+      "fraudulent": 1000,
+      "fraud_rate_percent": 5.0
+    }
+  ],
+  "primary_validation": {
+    "row_count": 100000,
+    "column_count_before_encoding": 12,
+    "missing_values": 0,
+    "has_missing": false,
+    "has_infinite_numeric_values": false,
+    "forbidden_columns_present": [],
+    "categorical_type_values": [
+      "CASH_IN",
+      "CASH_OUT",
+      "DEBIT",
+      "PAYMENT",
+      "TRANSFER"
+    ]
+  },
+  "train_validation": {
+    "row_count": 80000,
+    "column_count_before_encoding": 12,
+    "missing_values": 0,
+    "has_missing": false,
+    "has_infinite_numeric_values": false,
+    "forbidden_columns_present": [],
+    "categorical_type_values": [
+      "CASH_IN",
+      "CASH_OUT",
+      "DEBIT",
+      "PAYMENT",
+      "TRANSFER"
+    ]
+  },
+  "test_validation": {
+    "row_count": 20000,
+    "column_count_before_encoding": 12,
+    "missing_values": 0,
+    "has_missing": false,
+    "has_infinite_numeric_values": false,
+    "forbidden_columns_present": [],
+    "categorical_type_values": [
+      "CASH_IN",
+      "CASH_OUT",
+      "DEBIT",
+      "PAYMENT",
+      "TRANSFER"
+    ]
+  }
+}

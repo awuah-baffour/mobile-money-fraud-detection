@@ -1,0 +1,67 @@
+{
+  "comparison": [
+    {
+      "Model": "Logistic Regression",
+      "Accuracy": 0.9583,
+      "Precision": 0.545655,
+      "Recall": 0.992,
+      "F1": 0.704045,
+      "ROC-AUC": 0.993674,
+      "PR-AUC": 0.934935
+    },
+    {
+      "Model": "Random Forest",
+      "Accuracy": 0.99565,
+      "Precision": 0.924651,
+      "Recall": 0.994,
+      "F1": 0.958072,
+      "ROC-AUC": 0.997621,
+      "PR-AUC": 0.99354
+    },
+    {
+      "Model": "XGBoost",
+      "Accuracy": 0.9996,
+      "Precision": 0.997992,
+      "Recall": 0.994,
+      "F1": 0.995992,
+      "ROC-AUC": 0.998848,
+      "PR-AUC": 0.99593
+    }
+  ],
+  "confusion_matrices": [
+    {
+      "Model": "Logistic Regression",
+      "true_negative": 18174,
+      "false_positive": 826,
+      "false_negative": 8,
+      "true_positive": 992
+    },
+    {
+      "Model": "Random Forest",
+      "true_negative": 18919,
+      "false_positive": 81,
+      "false_negative": 6,
+      "true_positive": 994
+    },
+    {
+      "Model": "XGBoost",
+      "true_negative": 18998,
+      "false_positive": 2,
+      "false_negative": 6,
+      "true_positive": 994
+    }
+  ],
+  "scale_pos_weight": 19.0,
+  "strongest_baseline_candidate": "XGBoost",
+  "suspicious_notes": [
+    "Random Forest produced an unusually high metric (Recall=0.9940, ROC-AUC=0.9976, PR-AUC=0.9935). This should be discussed carefully.",
+    "XGBoost produced an unusually high metric (Recall=0.9940, ROC-AUC=0.9988, PR-AUC=0.9959). This should be discussed carefully.",
+    "The primary feature set excludes raw identifiers, isFlaggedFraud, and post-transaction balance variables.",
+    "PaySim balance variables still require careful academic discussion because the dataset documentation warns that fraudulent transactions are cancelled."
+  ],
+  "saved_models": [
+    "models\\logistic_regression_baseline.pkl",
+    "models\\random_forest_baseline.pkl",
+    "models\\xgboost_baseline.pkl"
+  ]
+}

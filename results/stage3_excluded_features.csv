@@ -1,0 +1,8 @@
+column,reason
+nameOrig,High-cardinality sender identifier; raw encoding would create arbitrary numeric relationships and poor generalization.
+nameDest,High-cardinality recipient identifier; raw encoding would create arbitrary numeric relationships and poor generalization.
+isFlaggedFraud,"Existing PaySim rule-based fraud flag; Stage 2 precision was 1.0000 but recall was only 0.0020, so it is treated separately."
+newbalanceOrig,Post-transaction sender balance; may not be available during real-time transaction evaluation.
+newbalanceDest,Post-transaction recipient balance; may not be available during real-time transaction evaluation.
+origin_balance_change,"Requires newbalanceOrig, so it is a post-transaction feature excluded from the primary model."
+destination_balance_change,"Requires newbalanceDest, so it is a post-transaction feature excluded from the primary model."

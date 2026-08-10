@@ -1,0 +1,118 @@
+{
+  "selected_model": "XGBoost",
+  "selected_threshold": 0.55,
+  "final_metrics": {
+    "Model": "XGBoost",
+    "Threshold": 0.55,
+    "Accuracy": 0.99945,
+    "Precision": 0.994994994994995,
+    "Recall": 0.994,
+    "F1": 0.9944972486243121,
+    "ROC-AUC": 0.9990381842105264,
+    "PR-AUC": 0.9962994092611824,
+    "TN": 18995,
+    "FP": 5,
+    "FN": 6,
+    "TP": 994
+  },
+  "final_confusion_matrix": {
+    "true_negative": 18995,
+    "false_positive": 5,
+    "false_negative": 6,
+    "true_positive": 994
+  },
+  "best_params": {
+    "Logistic Regression": {
+      "classifier__class_weight": null,
+      "classifier__C": 5.0
+    },
+    "Random Forest": {
+      "classifier__n_estimators": 150,
+      "classifier__min_samples_split": 10,
+      "classifier__min_samples_leaf": 1,
+      "classifier__max_features": "log2",
+      "classifier__max_depth": null,
+      "classifier__class_weight": "balanced"
+    },
+    "XGBoost": {
+      "classifier__colsample_bytree": 0.8391883316733973,
+      "classifier__gamma": 0.11237380387495231,
+      "classifier__learning_rate": 0.10512352997898983,
+      "classifier__max_depth": 3,
+      "classifier__min_child_weight": 5,
+      "classifier__n_estimators": 134,
+      "classifier__reg_alpha": 0.066106775625201,
+      "classifier__reg_lambda": 0.823454610111791,
+      "classifier__scale_pos_weight": 19.0,
+      "classifier__subsample": 0.9430611923241643
+    }
+  },
+  "diagnostics": {
+    "type_rule": {
+      "Model": "Rule: TRANSFER or CASH_OUT",
+      "Threshold": 0.5,
+      "Accuracy": 0.5879,
+      "Precision": 0.10820168794633196,
+      "Recall": 1.0,
+      "F1": 0.19527436047646943,
+      "ROC-AUC": 0.7831052631578947,
+      "PR-AUC": 0.10820168794633196,
+      "TN": 10758,
+      "FP": 8242,
+      "FN": 0,
+      "TP": 1000
+    },
+    "amount_rules": [
+      {
+        "feature": "amount",
+        "threshold": 714218.48,
+        "precision": 0.420725,
+        "recall": 0.406,
+        "f1": 0.413232,
+        "false_positives": 559,
+        "false_negatives": 594,
+        "true_positives": 406,
+        "true_negatives": 18441
+      },
+      {
+        "feature": "log_amount",
+        "threshold": 13.478946,
+        "precision": 0.420725,
+        "recall": 0.406,
+        "f1": 0.413232,
+        "false_positives": 559,
+        "false_negatives": 594,
+        "true_positives": 406,
+        "true_negatives": 18441
+      },
+      {
+        "feature": "amount_to_origin_balance_ratio",
+        "threshold": 0.578842,
+        "precision": 0.070749,
+        "recall": 0.989,
+        "f1": 0.132052,
+        "false_positives": 12990,
+        "false_negatives": 11,
+        "true_positives": 989,
+        "true_negatives": 6010
+      },
+      {
+        "feature": "amount_to_destination_balance_ratio",
+        "threshold": 223732.704,
+        "precision": 0.433846,
+        "recall": 0.423,
+        "f1": 0.428354,
+        "false_positives": 552,
+        "false_negatives": 577,
+        "true_positives": 423,
+        "true_negatives": 18448
+      }
+    ]
+  },
+  "suspicious_notes": [
+    "Tree-based model performance remains very high even after excluding raw identifiers, isFlaggedFraud, and post-transaction balances.",
+    "The simple transaction-type rule has perfect recall but low precision, showing that PaySim's fraud labels are strongly linked to TRANSFER and CASH_OUT in this sample.",
+    "Feature importance is dominated by balance sufficiency and balance-ratio behavior, suggesting the models may be learning PaySim-specific simulation patterns.",
+    "The results demonstrate strong performance within the reduced PaySim experimental environment, not guaranteed real-world Ghanaian mobile-money performance."
+  ]
+}

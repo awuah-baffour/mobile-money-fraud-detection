@@ -1,0 +1,2 @@
+flagged_fraud_cases,flagged_legitimate_cases,total_fraud_cases,precision,recall
+10,0,5000,1.0,0.002

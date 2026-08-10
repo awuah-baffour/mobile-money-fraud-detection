@@ -1,0 +1,147 @@
+{
+  "validation": {
+    "rows": 100000,
+    "columns": 11,
+    "missing_values_total": 0,
+    "duplicate_rows": 0,
+    "negative_amount_rows": 0,
+    "negative_balance_rows": 0,
+    "unexpected_transaction_types": [],
+    "unexpected_target_values": []
+  },
+  "class_counts": {
+    "Legitimate": {
+      "count": 95000,
+      "percentage": 95.0
+    },
+    "Fraudulent": {
+      "count": 5000,
+      "percentage": 5.0
+    }
+  },
+  "fraud_by_type": {
+    "CASH_IN": {
+      "legitimate_count": 20745,
+      "fraud_count": 0,
+      "total_count": 20745,
+      "fraud_rate_percent": 0.0
+    },
+    "CASH_OUT": {
+      "legitimate_count": 33310,
+      "fraud_count": 2548,
+      "total_count": 35858,
+      "fraud_rate_percent": 7.1058
+    },
+    "DEBIT": {
+      "legitimate_count": 622,
+      "fraud_count": 0,
+      "total_count": 622,
+      "fraud_rate_percent": 0.0
+    },
+    "PAYMENT": {
+      "legitimate_count": 32379,
+      "fraud_count": 0,
+      "total_count": 32379,
+      "fraud_rate_percent": 0.0
+    },
+    "TRANSFER": {
+      "legitimate_count": 7944,
+      "fraud_count": 2452,
+      "total_count": 10396,
+      "fraud_rate_percent": 23.586
+    }
+  },
+  "amount_summary": {
+    "Legitimate": {
+      "count": 95000,
+      "mean": 180352.0319,
+      "median": 74356.245,
+      "std": 642935.3713,
+      "min": 0.58,
+      "max": 69886731.3
+    },
+    "Fraudulent": {
+      "count": 5000,
+      "mean": 1515679.1804,
+      "median": 450944.465,
+      "std": 2449810.4994,
+      "min": 0.0,
+      "max": 10000000.0
+    }
+  },
+  "flag_metrics": {
+    "flagged_fraud_cases": 10,
+    "flagged_legitimate_cases": 0,
+    "total_fraud_cases": 5000,
+    "precision": 1.0,
+    "recall": 0.002
+  },
+  "identifier_summary": {
+    "unique_nameOrig": 99999,
+    "repeated_nameOrig_values": 1,
+    "max_nameOrig_frequency": 2,
+    "unique_nameDest": 92971,
+    "repeated_nameDest_values": 6230,
+    "max_nameDest_frequency": 5
+  },
+  "time_summary": {
+    "min_step": 1,
+    "max_step": 743,
+    "unique_steps": 742
+  },
+  "amount_band": {
+    "Very low": {
+      "min_amount": 0.0,
+      "max_amount": 10374.16,
+      "transaction_count": 20000,
+      "fraud_count": 172,
+      "fraud_rate_percent": 0.86
+    },
+    "Low": {
+      "min_amount": 10375.0,
+      "max_amount": 40726.95,
+      "transaction_count": 20000,
+      "fraud_count": 356,
+      "fraud_rate_percent": 1.78
+    },
+    "Medium": {
+      "min_amount": 40727.63,
+      "max_amount": 132117.05,
+      "transaction_count": 20000,
+      "fraud_count": 732,
+      "fraud_rate_percent": 3.66
+    },
+    "High": {
+      "min_amount": 132117.69,
+      "max_amount": 266322.42,
+      "transaction_count": 20000,
+      "fraud_count": 689,
+      "fraud_rate_percent": 3.445
+    },
+    "Very high": {
+      "min_amount": 266323.7,
+      "max_amount": 69886731.3,
+      "transaction_count": 20000,
+      "fraud_count": 3051,
+      "fraud_rate_percent": 15.255
+    }
+  },
+  "balance_consistency": [
+    {
+      "scope": "All transactions",
+      "rows": 100000,
+      "origin_exact_match_percent": 24.206,
+      "destination_exact_match_percent": 35.649,
+      "origin_median_absolute_error": 53907.87,
+      "destination_median_absolute_error": 5147.905
+    },
+    {
+      "scope": "TRANSFER and CASH_OUT only",
+      "rows": 46254,
+      "origin_exact_match_percent": 19.2005,
+      "destination_exact_match_percent": 76.0194,
+      "origin_median_absolute_error": 121946.09,
+      "destination_median_absolute_error": 0.0
+    }
+  ]
+}

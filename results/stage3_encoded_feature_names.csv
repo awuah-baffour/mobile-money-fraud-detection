@@ -1,0 +1,17 @@
+encoded_feature
+step
+amount
+log_amount
+oldbalanceOrg
+oldbalanceDest
+amount_to_origin_balance_ratio
+amount_to_destination_balance_ratio
+origin_balance_zero
+destination_balance_zero
+origin_balance_sufficient
+step_day
+type_CASH_IN
+type_CASH_OUT
+type_DEBIT
+type_PAYMENT
+type_TRANSFER

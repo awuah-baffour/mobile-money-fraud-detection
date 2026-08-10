@@ -1,0 +1,4 @@
+Model,Best Parameters
+Logistic Regression,"{""classifier__class_weight"": null, ""classifier__C"": 5.0}"
+Random Forest,"{""classifier__n_estimators"": 150, ""classifier__min_samples_split"": 10, ""classifier__min_samples_leaf"": 1, ""classifier__max_features"": ""log2"", ""classifier__max_depth"": null, ""classifier__class_weight"": ""balanced""}"
+XGBoost,"{""classifier__colsample_bytree"": 0.8391883316733973, ""classifier__gamma"": 0.11237380387495231, ""classifier__learning_rate"": 0.10512352997898983, ""classifier__max_depth"": 3, ""classifier__min_child_weight"": 5, ""classifier__n_estimators"": 134, ""classifier__reg_alpha"": 0.066106775625201, ""classifier__reg_lambda"": 0.823454610111791, ""classifier__scale_pos_weight"": 19.0, ""classifier__subsample"": 0.9430611923241643}"

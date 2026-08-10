@@ -1,0 +1,3 @@
+transaction_class,count,percentage
+Legitimate,95000,95.0
+Fraudulent,5000,5.0
